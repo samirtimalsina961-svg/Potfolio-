@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Portfolio</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;scroll-behavior:smooth;font-family:Arial,sans-serif;}
+body{background:#f5f5f5;color:#222;transition:.4s;}
+.dark{background:#111;color:#fff;}
+header{background:#0d6efd;padding:15px;position:fixed;width:100%;top:0;}
+nav{display:flex;justify-content:center;gap:20px;}
+nav a{color:#fff;text-decoration:none;font-weight:bold;}
+nav a:hover{color:yellow;}
+section{padding:90px 20px;max-width:900px;margin:auto;}
+h1,h2{margin-bottom:15px;}
+.hero{text-align:center;padding-top:120px;}
+.btn{display:inline-block;margin-top:20px;padding:10px 20px;background:#0d6efd;color:#fff;text-decoration:none;border-radius:5px;}
+.btn:hover{background:#084298;}
+.skills,.projects{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:15px;}
+.card{background:#fff;padding:20px;border-radius:10px;text-align:center;box-shadow:0 3px 10px rgba(0,0,0,.1);transition:.3s;}
+.dark .card{background:#222;}
+.card:hover{transform:translateY(-5px);}
+footer{text-align:center;padding:20px;background:#0d6efd;color:#fff;}
+#topBtn{position:fixed;bottom:20px;right:20px;padding:10px 15px;border:none;background:#0d6efd;color:#fff;cursor:pointer;border-radius:5px;display:none;}
+</style></head><body>
+<header><nav><a href="#home">Home</a><a href="#about">About</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#contact">Contact</a><a href="#" onclick="document.body.classList.toggle('dark')">Dark Mode</a></nav></header>
+<section id="home" class="hero"><h1>Saroj Timalsina</h1><h2 id="typing"></h2><p>Welcome to my portfolio.</p><a class="btn" download href="resume.pdf">Download Resume</a> <a class="btn" href="#contact">Contact Me</a></section>
+<section id="about"><h2>About</h2><p><b>Name:</b> Saroj Timalsina</p><p><b>Education:</b> Grade 12 (Computer Science) — Completed</p><p><b>Goal:</b> To become a professional AI Engineer by mastering Artificial Intelligence, Machine Learning, and Deep Learning while building real-world AI applications.</p></section>
+<section id="skills"><h2>Skills</h2><div class="skills"><div class="card">HTML</div><div class="card">CSS</div><div class="card">JavaScript</div><div class="card">C</div><div class="card">Python</div></div></section>
+<section id="projects"><h2>Projects</h2><div class="projects"><div class="card">Temple Website</div><div class="card">Calculator</div><div class="card">To-Do List</div><div class="card">E-commerce Website (In Progress)</div></div></section>
+<section id="contact"><h2>Contact</h2><p>Email: samirtimalsina961@gmail.com</p><p>Phone:122344444</p><p>WhatsApp:122344444</p><p>Viber:122344444</p><p>LinkedIn: Saroj Timalsina</p><p>GitHub:(add username later)</p></section>
+<footer>©2026 Saroj Timalsina</footer><button id="topBtn" onclick="scrollTo({top:0,behavior:'smooth'})">Top</button>
+<script>
+const t="Aspiring AI Engineer";let i=0;function loop(){document.getElementById('typing').textContent=t.slice(0,i++);if(i<=t.length)setTimeout(loop,120);else setTimeout(()=>{i=0;document.getElementById('typing').textContent='';loop()},1200)}loop();
+onscroll=()=>topBtn.style.display=scrollY>200?'block':'none';
+</script></body></html>
